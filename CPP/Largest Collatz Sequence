@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int m=0,ans,cnt;
+    long long tmp;
+    for(int i=2;i<1000000;i++)
+    {
+        tmp=i;cnt=1;
+        while(tmp!=1)
+        {
+            if(tmp&1)tmp=3*tmp+1;
+            else tmp/=2;
+            cnt++;
+        }
+        if(cnt>m)
+        {
+            m=cnt;
+            ans=i;
+        }
+    }
+    cout<<ans<<endl;
+return 0;
+}
